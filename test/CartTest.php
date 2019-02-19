@@ -26,5 +26,4 @@ class CartTest extends TestCase
         // Assert
         $this->assertEquals(1, $cart->amount());
     }
-
 }
