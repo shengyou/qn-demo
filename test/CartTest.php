@@ -27,6 +27,20 @@ class CartTest extends TestCase
         $this->assertEquals(1, $cart->amount());
     }
 
+    public function testRemove()
+    {
+        // Arrange
+        $product = new Product();
+        $cart = new Cart();
+
+        // Act
+        $cart->add($product);
+        $cart->remove($product);
+
+        // Assert
+        $this->assertEquals(0, $cart->amount());
+    }
+
     public function testTotalPrice()
     {
         // Arrange

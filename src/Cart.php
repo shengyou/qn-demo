@@ -26,4 +26,9 @@ class Cart
 
         return $totalPrice;
     }
+
+    public function remove(Product $product)
+    {
+        array_pop($this->items);
+    }
 }
