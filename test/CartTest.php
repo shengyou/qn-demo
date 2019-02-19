@@ -8,6 +8,12 @@ use PHPUnit\Framework\TestCase;
 
 class CartTest extends TestCase
 {
+    public function testShouldReturn0WhenConstruct()
+    {
+        $cart = new Cart();
+        $this->assertEquals(0, $cart->amount());
+    }
+
     public function testAdd()
     {
         // Arrange
